@@ -1,1 +1,48 @@
+class Conta	{
+    private	String	titular;
+    private int	numero;
+    private	String	agencia;
+    private double	valor;
+    private	String	dataDeAbertura;
+
+    public Conta(String Titular) {
+    }
+
+    public	double	calculaRendimento() {
+        return this.valor	*	0.1;
+    }
+    public	String	getTitular() {
+        return this.titular;
+    }
+    public	void	setTitular	(String	titular) {
+        this.titular	=	titular;
+    }
+    public	int	getNumero() {
+        return this.numero;
+    }
+    public	void	setNumero	(int	numero) {
+        this.numero	=	numero;
+    }
+    public	String	getAgencia() {
+        return this.agencia;
+    }
+    public	void	setAgencia	(String	agencia) {
+        this.agencia	=	agencia;
+    }
+    public	double	getSaldo() {
+        return this.valor;
+    }
+    public	void	deposita	(double	valor) {
+        this.valor	+=	valor;
+    }
+    public	void	saca	(double	valor) {
+        this.valor	-=	valor;
+    }
+    public	String	getDataDeAbertura() {
+        return this.dataDeAbertura;
+    }
+    public	void	setDataDeAbertura	(String	dataDeAbertura) {
+        this.dataDeAbertura	=	dataDeAbertura;
+    }
+}
 

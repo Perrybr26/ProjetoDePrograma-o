@@ -1,0 +1,65 @@
+public class DriverOficina{
+    public static void main(String[] args) {
+        Oficina of = new Oficina();
+        Veiculo vec;
+        for (int i = 0; i < 4; i++){
+            vec = of.proximo();
+            of.manter(vec);
+        }
+    }
+}
+
+
+
+public class Oficina {
+    private int R = 0;
+    public Veiculo proximo(){
+        Veiculo v;
+        Random r = new Random();
+        R = r . nextInt( 2 );
+        if (R == 0)
+            v = new Automovel();
+        else
+            v = new Bike();
+        return v;
+    }
+    public void manter(Veiculo v){
+        System.out.println("\n -------------------");
+        v.verificalista();
+        v.reparar();
+        v.limpa();
+        System.out.println("-------------------");
+    }
+    public int getR() {
+        return R;
+    }
+}
+
+
+
+public class Bike  extends Veiculo {
+    public void verificalista() {
+        System.out.println("Verifica bike");
+    }
+    public void reparar(){
+        System.out.println("Repara bike");
+    }
+    public void limpa(){
+        System.out.println("Limpa bike");
+    }
+}
+
+
+
+
+public class Veiculo {
+    public void verificalista(){
+        System.out.println("Verifica veiculo");
+    }
+    public void reparar(){
+        System.out.println("Repara veiculo");
+    }
+    public void limpa(){
+        System.out.println("Limpa veiculo");
+    }
+}
